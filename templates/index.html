@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block app_content %}
+    <form action="" method="post">
+        <P>
+            <label for="width" class="btn btn-primary btn-size">Ширина поля</label>
+            <input type="text" name="width" value="{{ message_width }}">
+        </P>
+        <P>
+            <label for="height" class="btn btn-primary btn-size">Высота поля</label>
+            <input type="text" name="height" value="{{ message_height }}">
+        </P>
+        <p>
+            <input type="submit" class="btn btn-primary btn-size" value="Применить">
+        </p>
+    </form>
+
+    <a class="btn btn-primary" href="{{ url_for('live') }}">Создать жизнь</a>
+
+{% endblock %}
